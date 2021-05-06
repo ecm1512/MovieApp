@@ -11,6 +11,7 @@ import com.example.movieapp.R
 import com.example.movieapp.config.Setting
 import com.example.movieapp.databinding.ActivityMainBinding
 import com.example.movieapp.ui.login.UserViewModel
+import com.example.movieapp.ui.movie_list.MovieListActivity
 import com.example.movieapp.ui.single_movie_details.SingleMovie
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -40,8 +41,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun observer() {
         userViewModel.activityMutable.observe(this, Observer {
-            val intent = Intent(this, SingleMovie::class.java)
-            intent.putExtra("id",299534)
+            val intent = Intent(this, MovieListActivity::class.java)
             this.startActivity(intent)
         })
 
